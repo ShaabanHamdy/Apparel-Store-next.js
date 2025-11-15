@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import axios from "axios";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import type { Product } from "../../context/ContextType";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useAppContext } from "../../context/Context";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
+import type { Product } from "../../context/ContextType";
 
 const colors = ["red", "blue", "green"];
 
@@ -49,13 +49,13 @@ export default function Page() {
   }, [id]);
 
   if (loading) {
-    return (<div className="text-center py-10">Loading...</div>);
+    return <div className="text-center py-10">Loading...</div>;
   }
   if (error) {
-    return (<div className="text-center py-10 text-red-500">{error}</div>);
+    return <div className="text-center py-10 text-red-500">{error}</div>;
   }
   if (!product) {
-    return (<div className="text-center py-10">Product not found</div>);
+    return <div className="text-center py-10">Product not found</div>;
   }
 
   // Check if product is in wishlist

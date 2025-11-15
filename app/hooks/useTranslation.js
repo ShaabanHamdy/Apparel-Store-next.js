@@ -4,13 +4,6 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useAppContext } from "../(pages)/context/Context";
 
-/**
- * Hook that proxies translation and language switching to your app context.
- * - t(key): uses context t(...) so translations come from Context translations
- * - locale: current selectedLang from context
- * - router, pathname: next/navigation helpers
- * - changeLanguage(lang): uses context.setLanguage(lang) and refreshes router
- */
 export default function useTranslation() {
   const router = useRouter();
   const pathname = usePathname();

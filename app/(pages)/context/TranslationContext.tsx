@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// context/TranslationContext.tsx
+
 "use client";
-import { createContext, useState, useContext, ReactNode } from "react";
-import en from "../../../locales/en.json";
+import { createContext, ReactNode, useContext, useState } from "react";
 import ar from "../../../locales/ar.json";
+import en from "../../../locales/en.json";
 
 const TranslationContext = createContext<any>(null);
 
@@ -12,7 +12,12 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
   const translations = locale === "ar" ? ar : en;
 
   function t(key: string): string {
-    const result = key.split(".").reduce((obj: any, k: string) => (obj ? obj[k] : undefined), translations as any);
+    const result = key
+      .split(".")
+      .reduce(
+        (obj: any, k: string) => (obj ? obj[k] : undefined),
+        translations as any
+      );
     return typeof result === "string" ? result : key;
   }
 

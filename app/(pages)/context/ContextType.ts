@@ -142,12 +142,6 @@ export function reducer(state: State, action: Action): State {
   }
 }
 
-/**
- * AppContextType updated to include i18n helpers used across the app:
- * - t: translation function (key -> string)
- * - setLanguage: switch current language (e.g. 'en' | 'ar')
- * - style_mood: reactive style object used in UI components
- */
 export type AppContextType = {
   state: State;
   dispatch: React.Dispatch<Action>;

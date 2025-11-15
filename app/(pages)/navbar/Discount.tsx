@@ -1,7 +1,6 @@
 "use client";
-import { useAppContext } from "../context/Context";
-import React from "react";
 import useTranslation from "../../hooks/useTranslation";
+import { useAppContext } from "../context/Context";
 
 const Discount = () => {
   const { t } = useTranslation();

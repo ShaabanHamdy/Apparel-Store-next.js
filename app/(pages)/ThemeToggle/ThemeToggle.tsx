@@ -17,17 +17,14 @@ const ThemeToggle = () => {
       onClick={() =>
         dispatch({ type: "SET_THEME", payload: isDark ? "light" : "dark" })
       }
-      aria-label={isDark ? t("theme.switchToLight") : t("theme.switchToDark")} 
+      aria-label={isDark ? t("theme.switchToLight") : t("theme.switchToDark")}
     >
       {isDark ? (
         <FaSun className="text-yellow-400" />
       ) : (
         <FaMoon className="text-gray-800" />
       )}
-      <span>
-        {isDark ? t("theme.lightMode") : t("theme.darkMode")}{" "}
-      
-      </span>
+      <span>{isDark ? t("theme.lightMode") : t("theme.darkMode")} </span>
     </button>
   );
 };

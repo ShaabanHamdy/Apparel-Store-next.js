@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
 import { IoMdArrowDropdown } from "react-icons/io";
-import EG_flag from "../../../public/images/EG_flag.webp";
-import EN_flag from "../../../public/images/EN_Flag.webp";
-import sar_currency from "../../../public/images/sar_currency.webp";
-import uae_currency from "../../../public/images/uae_currency.webp";
-import us_currency from "../../../public/images/us_currency.webp";
+import {
+  EG_flag,
+  EN_flag,
+  sar_currency,
+  uae_currency,
+  us_currency,
+} from "../../getImg";
+
 import { useAppContext } from "../context/Context";
 
 const LangAndCrr = () => {

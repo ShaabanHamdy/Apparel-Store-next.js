@@ -1,31 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { HiShoppingCart } from "react-icons/hi";
 import { useAppContext } from "../../context/Context";
 import { Product } from "../../context/ContextType";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { HiShoppingCart } from "react-icons/hi";
-// import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const { state, dispatch , style_mood } = useAppContext();
-  
-  const isWishlisted = state.wishlist.some((item: Product) => item._id === product._id);
-  const isInCart = state.cart.some(item => item.product._id === product._id);
+  const { state, dispatch, style_mood } = useAppContext();
+
+  const isWishlisted = state.wishlist.some(
+    (item: Product) => item._id === product._id
+  );
+  const isInCart = state.cart.some((item) => item.product._id === product._id);
   const router = useRouter();
 
   // const handleCardClick = () => {
   //   router.push(`/productCardDetails/${product._id}`);
   // };
   const handleCardClick = () => {
-  dispatch({ type: "SET_SELECTED_PRODUCT", payload: product });
-  router.push(`/${product._id}`);
-};
-// console.log("ProductCard clicked for product ID:", product._id);
+    dispatch({ type: "SET_SELECTED_PRODUCT", payload: product });
+    router.push(`/${product._id}`);
+  };
+  // console.log("ProductCard clicked for product ID:", product._id);
 
   return (
     <div
-    style={style_mood}
+      style={style_mood}
       className="relative group bg-white cursor-pointer rounded-lg shadow hover:shadow-lg transition p-2"
       onClick={handleCardClick}
     >
@@ -39,7 +40,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       /> */}
       {/* Heart icon appears on hover */}
       <button
-      style={style_mood}
+        style={style_mood}
         className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition bg-white rounded-full p-2 shadow cursor-pointer"
         onClick={(e) => {
           e.stopPropagation();
@@ -54,7 +55,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       </button>
       {/* Cart icon always visible */}
       <button
-      style={style_mood}
+        style={style_mood}
         className="absolute bottom-2 right-2 bg-white rounded-full p-2 shadow cursor-pointer"
         onClick={(e) => {
           e.stopPropagation();

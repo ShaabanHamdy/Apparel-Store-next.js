@@ -1,15 +1,6 @@
-import { useAppContext } from "../context/Context";
 import useTranslation from "../../hooks/useTranslation";
+import { useAppContext } from "../context/Context";
 
-
-
-// const LINKS = [
-//   { label: "Men", href: "#" },
-//   { label: "Women", href: "#" },
-//   { label: "Kids", href: "#" },
-//   { label: "Accessories", href: "#" },
-//   { label: "Clearance", href: "#" },
-// ];
 const LINKS = [
   { key: "nav.men", href: "#" },
   { key: "nav.women", href: "#" },
@@ -37,7 +28,7 @@ const NavLinks = () => {
     }
   `}
         >
-         {t(link.key)}
+          {t(link.key)}
         </a>
       ))}
     </>

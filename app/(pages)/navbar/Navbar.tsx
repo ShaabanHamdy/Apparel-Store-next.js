@@ -6,7 +6,6 @@ import MobileScreen from "./MobileScreen";
 import NavLinks from "./NavLinks";
 
 export default function Navbar() {
- 
   const { style_mood } = useAppContext();
   return (
     <div style={style_mood} className="p-1">

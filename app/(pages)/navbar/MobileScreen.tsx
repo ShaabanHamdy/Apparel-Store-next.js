@@ -3,21 +3,19 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { FaBars, FaRegUser, FaSearch } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import useTranslation from "../../hooks/useTranslation";
 import { useAppContext } from "../context/Context";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import LangAndCrr from "./LangAndCrr";
 import NavLinks from "./NavLinks";
-import useTranslation from "../../hooks/useTranslation"; // ✅ Import translation hook
 
 const MobileScreen = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { state, dispatch } = useAppContext();
-  const { t } = useTranslation(); // ✅ Initialize translation
+  const { t } = useTranslation(); 
 
-  // detect RTL (Arabic) and pick animation + position accordingly
   const isRTL = state.selectedLang === "ar";
 
-  // Slide in from side depending on direction + fade + slight scale
   const variants = isRTL
     ? {
         initial: { x: "-100%", opacity: 0, scale: 0.98 },

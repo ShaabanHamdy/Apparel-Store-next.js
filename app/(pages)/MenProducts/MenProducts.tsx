@@ -1,14 +1,12 @@
 "use client";
-import React from "react";
 import ProductCard from "../(product)/ProductCard/ProductCard";
+import useTranslation from "../../hooks/useTranslation";
 import { useAppContext } from "../context/Context";
-import useTranslation from "../../hooks/useTranslation"; // ✅ Import translation hook
 
 const MenProducts = () => {
   const { state, style_mood } = useAppContext();
-  const { t } = useTranslation(); // ✅ Use translation function
+  const { t } = useTranslation();
 
-  // Filter products for men's category (adjust categoryName as needed)
   const menProducts = state.products.filter((product) =>
     product.categoryName?.toLowerCase().includes("men")
   );

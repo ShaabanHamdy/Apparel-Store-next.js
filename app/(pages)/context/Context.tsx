@@ -8,8 +8,8 @@ import React, {
   useEffect,
   useReducer,
 } from "react";
-import en from "../../../locales/en.json";
 import ar from "../../../locales/ar.json";
+import en from "../../../locales/en.json";
 import { AppContextType, initialState, reducer } from "./ContextType";
 
 const translations: Record<string, any> = {
