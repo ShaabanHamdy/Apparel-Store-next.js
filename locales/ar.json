@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "men": "رجال",
+    "women": "نساء",
+    "kids": "أطفال",
+    "accessories": "إكسسوارات",
+    "clearance": "تصفية"
+  },
+  "navbar": {
+    "language": "اللغة",
+    "currency": "العملة",
+    "profile": "ملفي الشخصي",
+    "searchPlaceholder": "...ابحث"
+  },
+  "language": {
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "currency": {
+    "egp": "الجنيه المصري (EGP)",
+    "usd": "الدولار الأمريكي (USD)",
+    "sar": "الريال السعودي (SAR)",
+    "aed": "الدرهم الإماراتي (AED)"
+  },
+  "discount": {
+    "banner": "خصم 20٪ على جميع الطلبات + شحن مجاني: استخدم الكود WIN20 عند الدفع"
+  },
+  "icons": {
+    "wishlist": "قائمة المفضلات",
+    "cart": "عربة التسوق"
+  },
+  "theme": {
+    "lightMode": "الوضع الفاتح",
+    "darkMode": "الوضع الداكن",
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "switchToDark": "التبديل إلى الوضع الداكن"
+  },
+  "menProducts": {
+    "title": "منتجات الرجال",
+    "noProducts": "لا توجد منتجات رجالية متاحة."
+  },
+  "registration": {
+    "register": "تسجيل",
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "mobile": "رقم الهاتف",
+    "day": "اليوم",
+    "month": "الشهر",
+    "year": "السنة",
+    "select_gender": "اختر النوع",
+    "male": "ذكر",
+    "female": "أنثى",
+    "other": "آخر",
+    "select_nationality": "اختر الجنسية",
+    "egyptian": "مصري",
+    "saudi": "سعودي",
+    "emirati": "إماراتي",
+    "american": "أمريكي",
+    "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
+    "registered_success": "تم التسجيل بنجاح!"
+  },
+  "login": {
+    "title": "تسجيل الدخول إلى حسابك",
+    "instructions": "الرجاء إدخال بياناتك لتسجيل الدخول.",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "remember": "تذكرني",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "signIn": "تسجيل الدخول",
+    "noAccount": "ليس لديك حساب؟",
+    "register": "سجل"
+  }
+}
+
+

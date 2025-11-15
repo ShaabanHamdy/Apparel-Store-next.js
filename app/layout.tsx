@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { AppProvider } from "./pages/context/Context";
 import "./globals.css";
+import { AppProvider } from "./(pages)/context/Context";
+import Discount from "./(pages)/navbar/Discount";
+import Navbar from "./(pages)/navbar/Navbar";
+import { cookies } from "next/headers"; // ✅ To detect locale on server if using Next.js i18n
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// ✅ Metadata — you can translate this dynamically later based on locale
 export const metadata: Metadata = {
   title: "SHAABAN",
   description:
@@ -24,36 +28,23 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // ✅ Detect locale (if using Next.js built-in i18n)
+  const locale = (await cookies()).get("NEXT_LOCALE")?.value || "en";
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
-        cz-shortcut-listen="true"
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        cz-shortcut-listen="true"
+
       >
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          {/* ✅ Translatable components */}
+          <Discount />
+          <Navbar />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
 }
-
-// export default async function LocaleLayout({
-//   children,
-//   params
-// }: {
-//   children: React.ReactNode;
-//   params: Promise<{locale: string}>;
-// }) {
-//   // Ensure that the incoming `locale` is valid
-//   const {locale} = await params;
-//   if (!hasLocale(routing.locales, locale)) {
-//     notFound();
-//   }
-
-//   return (
-//     <html lang={locale}>
-//       <body>
-//         <NextIntlClientProvider>{children}</NextIntlClientProvider>
-//       </body>
-//     </html>
-//   );
-// }

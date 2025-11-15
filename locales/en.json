@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "men": "Men",
+    "women": "Women",
+    "kids": "Kids",
+    "accessories": "Accessories",
+    "clearance": "Clearance"
+  },
+
+  "navbar": {
+    "language": "Language",
+    "currency": "Currency",
+    "profile": "My Profile",
+    "searchPlaceholder": "Search..."
+
+  },
+  "language": {
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "currency": {
+    "egp": "Egyptian (EGP)",
+    "usd": "US Dollar (USD)",
+    "sar": "Saudi Riyal (SAR)",
+    "aed": "UAE Dirham (AED)"
+  },
+  "discount": {
+    "banner": "20% OFF ENTIRE ORDER + FREE SHIPPING: Use Code WIN20 at checkout"
+  },
+  "icons": {
+    "wishlist": "Wishlist",
+    "cart": "Shopping Cart"
+  },
+  "theme": {
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "menProducts": {
+    "title": "Men's Products",
+    "noProducts": "No men's products found."
+  }
+  ,
+  "registration": {
+    "register": "Register",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "mobile": "Mobile",
+    "day": "Day",
+    "month": "Month",
+    "year": "Year",
+    "select_gender": "Select Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "select_nationality": "Select Nationality",
+    "egyptian": "Egyptian",
+    "saudi": "Saudi",
+    "emirati": "Emirati",
+    "american": "American",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "registered_success": "Registered successfully!"
+  },
+  "login": {
+    "title": "Sign in to your account",
+    "instructions": "Please enter your credentials to log in.",
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign In",
+    "noAccount": "Don't have an account?",
+    "register": "Register"
+  }
+  
+}

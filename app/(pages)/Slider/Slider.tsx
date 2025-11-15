@@ -6,10 +6,12 @@ import one1 from "../../../public/images/slider/20240206012522252244882.webp";
 import one4 from "../../../public/images/slider/8325507.jpg";
 import one3 from "../../../public/images/slider/9707789.jpg";
 import one2 from "../../../public/images/slider/minimalist-mens-fashion-beige-shirt-and-trousers.webp";
+import { useAppContext } from "../context/Context";
 
 const images = [one1, one2, one3, one4];
 
 const Slider = () => {
+   const {  style_mood } = useAppContext();
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -27,7 +29,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="h-[86vh]  bg-gray-900 relative overflow-hidden">
+    <div style={style_mood} className="h-[86vh]  bg-gray-900 relative overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={current}
